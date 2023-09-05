@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      maxWidth: {
+        xxs: "15rem",
+      },
       rotate: {
         29: "-29deg",
       },

@@ -35,6 +35,9 @@ module.exports = {
         blur: "rgba(217, 217, 217, 0.27)",
         page: "#1f3c74",
         desc: "#4285f4",
+        search: "rgba(32, 50, 97, 0.2)",
+        button: "rgba(255, 255, 255, 0.5)",
+        hover: "rgba(255,255,255)",
       },
       fontFamily: {
         Orbitron: ["Orbitron"],

@@ -13,9 +13,20 @@ module.exports = {
         rotation: {
           "0%": { transform: "rotate(-360deg)" },
         },
+        text: {
+          "0%, 100%": {
+            "background-size": "200% 200%",
+            "background-position": "left center",
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "right center",
+          },
+        },
       },
       animation: {
         rotation: "rotation 6s linear infinite",
+        text: "text 5s ease infinite",
       },
       backdropBlur: {
         xs: "1px",

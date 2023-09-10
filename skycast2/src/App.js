@@ -24,11 +24,8 @@ function App() {
         <InputBar />
       </div>
 
-      <div class=" p-6 drop-shadow-md ">
+      <div class=" p-6 drop-shadow-md hidden">
         <Loading />
-      </div>
-      <div class="p-6 drop-shadow-md hidden">
-        <Results />
       </div>
 
       <p class="text-center text-xxs pb-2">

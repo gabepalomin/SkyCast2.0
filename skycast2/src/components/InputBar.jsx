@@ -1,6 +1,38 @@
 import Block from "./Iblock";
 import { BiSearchAlt } from "react-icons/bi";
+import { useState } from "react";
 const InputBar = () => {
+
+
+
+
+
+  //Aarush's stuff start ------
+  const [flightData, setFlightData] = useState(null);
+  //hardcoded for now, but put the flight number here
+  const flightnumber = "AA1004"
+
+  const getFlightData = async () => {
+    const response = await fetch('/api/flight-data/' + flightnumber)
+    const json = await response.json()
+    console.log(json)
+    if(response.ok) {
+      console.log("Response is ok")
+      setFlightData(json)
+    }
+    else{
+      console.log("response not ok")
+    }
+  }
+  //Aarush's stuff end ------
+
+
+
+
+
+
+
+
   return (
     <div class="bg-desc rounded-lg p-5">
       <div class=" grid grid-cols-3 grid-rows-2  gap-1 ">

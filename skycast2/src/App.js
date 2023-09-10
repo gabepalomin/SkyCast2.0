@@ -3,6 +3,9 @@ import "./index.css";
 import Banner from "./components/Banner";
 import InputBar from "./components/InputBar";
 import InfoCard from "./components/InfoCard";
+import Loading from "./components/Loading";
+import Results from "./components/Results";
+
 function App() {
   return (
     <div className="bg-page min-h-screen font-Orbitron">
@@ -20,6 +23,17 @@ function App() {
         </h1>
         <InputBar />
       </div>
+
+      <div class=" p-6 drop-shadow-md ">
+        <Loading />
+      </div>
+      <div class="p-6 drop-shadow-md hidden">
+        <Results />
+      </div>
+
+      <p class="text-center text-xxs pb-2">
+        ©️ 2023 Skycast2.0. All rights reserved
+      </p>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { BiSearchAlt } from "react-icons/bi";
 const InputBar = () => {
   return (
     <div class="bg-desc rounded-lg p-5">
-      <div class=" grid grid-cols-2 grid-rows-3  gap-3 ">
+      <div class=" grid grid-cols-3 grid-rows-2  gap-1 ">
         <Block message={"Departure"} />
         <Block message={"Arrival"} />
         <Block message={"Gate"} />
@@ -12,7 +12,7 @@ const InputBar = () => {
         <Block message={"Flight Date"} />
       </div>
       <div class="text-center flex flex-col gap-3 pt-3  items-center">
-        <div class="bg-white p-3 py-5 w-full shadow-xl">
+        <div class=" bg-slate-100 p-3 py-5 w-full shadow-xl rounded-md font-semibold">
           <h2 class="">
             Enter Your <span class="text-blue-600">Flight Number:</span>
           </h2>

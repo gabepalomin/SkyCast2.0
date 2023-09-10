@@ -1,10 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js,jsx}"],
   theme: {
     extend: {
       maxWidth: {
         xxs: "15rem",
+      },
+      fontSize: {
+        xxs: "0.7rem",
       },
       rotate: {
         29: "-29deg",
@@ -38,6 +41,7 @@ module.exports = {
         search: "rgba(32, 50, 97, 0.2)",
         button: "rgba(255, 255, 255, 0.5)",
         hover: "rgba(255,255,255)",
+        loading: "rgba(46, 41, 41, 0.27)",
       },
       fontFamily: {
         Orbitron: ["Orbitron"],

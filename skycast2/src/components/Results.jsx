@@ -1,6 +1,6 @@
 import { FaMapLocationDot } from "react-icons/fa6";
 
-const Results = (infoData) => {
+function Results({ infoData }) {
   const {
     depIata,
     arrIata,
@@ -10,7 +10,7 @@ const Results = (infoData) => {
     depAirport,
     arrAirport,
     gate,
-  } = infoData.infoData;
+  } = infoData;
   console.log(infoData);
   return (
     <div class="grid grid-cols-2 grid-rows-5 gap-2">
@@ -48,6 +48,6 @@ const Results = (infoData) => {
       </div>
     </div>
   );
-};
+}
 
 export default Results;

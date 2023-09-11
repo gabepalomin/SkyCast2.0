@@ -4,7 +4,6 @@ import Banner from "./components/Banner";
 import InputBar from "./components/InputBar";
 import InfoCard from "./components/InfoCard";
 import Loading from "./components/Loading";
-import Results from "./components/Results";
 
 function App() {
   return (

@@ -6,7 +6,7 @@ const Banner = () => {
       </div>
 
       <div className="bg-blur backdrop-blur-xs rounded-3xl  text-white">
-        <h1 className="px-8 py-2 text-2xl ">SkyCast</h1>
+        <h1 className="px-8 py-2 text-2xl md:text-4xl">SkyCast</h1>
       </div>
     </div>
   );

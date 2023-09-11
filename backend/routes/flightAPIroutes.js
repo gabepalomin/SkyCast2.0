@@ -10,7 +10,7 @@ router.get("/:id", async (req, res) => {
   //console.log(input.id);
   try {
     const response = await axios.get(
-      "http://api.aviationstack.com/v1/flights?access_key=b39d1984c7900258091947bda6cbbdb9&flight_iata=" +
+      "http://api.aviationstack.com/v1/flights?access_key=8c1cb593380c544d1a65ff51cd05c082&flight_iata=" +
         input.id
     );
 

@@ -3,7 +3,6 @@ import "./index.css";
 import Banner from "./components/Banner";
 import InputBar from "./components/InputBar";
 import InfoCard from "./components/InfoCard";
-import Loading from "./components/Loading";
 
 function App() {
   return (
@@ -12,22 +11,17 @@ function App() {
         <Banner />
       </div>
 
-      <div class="p-6 drop-shadow-md">
-        <InfoCard />
+      <div class="flex flex-col items-center justify-center sm:flex-row sm:justify-center md:gap-20">
+        <div class="p-6 drop-shadow-md">
+          <InfoCard />
+        </div>
+
+        <div class="p-6 drop-shadow-md">
+          <InputBar />
+        </div>
       </div>
 
-      <div class="p-6 drop-shadow-md">
-        <h1 class="text-center text-white font-semibold text-xl pb-2">
-          We Will Find:
-        </h1>
-        <InputBar />
-      </div>
-
-      <div class=" p-6 drop-shadow-md hidden">
-        <Loading />
-      </div>
-
-      <p class="text-center text-xxs pb-2">
+      <p class=" text-center text-xxs pb-2  xs:pt-52 md:pt-52">
         ©️ 2023 Skycast2.0. All rights reserved
       </p>
     </div>

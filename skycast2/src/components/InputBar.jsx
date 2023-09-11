@@ -74,7 +74,9 @@ const InputBar = () => {
         </div>
       </div>
       <div class="pt-6 drop-shadow-md ">
-        <Results infoData={flightData} />
+        {!flightData ? "loading" : <Results infoData={flightData} />}
+        {/* //lets the
+        api fetch request finish before inputting an object into the component */}
       </div>
     </>
   );

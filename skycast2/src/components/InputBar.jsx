@@ -7,27 +7,31 @@ const InputBar = () => {
   //Aarush's stuff start ------
 
   const [flightData, setFlightData] = useState(null);
+  const [flightNum, setFlightNum] = useState("");
+
+  const searchFlight = (event) => {
+    const flightnumber = "AA1004";
+    const url = `http://localhost:4000/api/flight-data/${flightnumber}`;
+    useEffect(() => {
+      const getFlightData = async () => {
+        const response = await fetch(url);
+        const json = await response.json(); //This is the line causing me error
+        console.log(response);
+        console.log(json);
+        if (response.ok) {
+          console.log("Response is ok");
+          setFlightData(json);
+          console.log(flightData);
+        } else {
+          console.log("response not ok");
+        }
+      };
+
+      getFlightData();
+    }, []);
+  };
+
   //hardcoded for now, but put the flight number here
-
-  const flightnumber = "AA1004";
-  const url = `http://localhost:4000/api/flight-data/${flightnumber}`;
-  useEffect(() => {
-    const getFlightData = async () => {
-      const response = await fetch(url);
-      const json = await response.json(); //This is the line causing me error
-      console.log(response);
-      console.log(json);
-      if (response.ok) {
-        console.log("Response is ok");
-        setFlightData(json);
-        console.log(flightData);
-      } else {
-        console.log("response not ok");
-      }
-    };
-
-    getFlightData();
-  }, []);
 
   //Aarush's stuff end ------
 
@@ -53,12 +57,14 @@ const InputBar = () => {
               type="text"
               placeholder="Flight #"
               class=" border-none outline-none text-base w-5/6 uppercase text-white bg-transparent font-bold"
+              onChange={(event) => setFlightNum(event.target.value)}
             />
             <button
               type="submit"
               value="submit"
               id="FlightNumberSubmitButton"
               class=" border-none aspect-square rounded-full bg-button  h-14 flex justify-center items-center duration-500 hover:bg-hover"
+              onClick={searchFlight()}
             >
               <i className="text-4xl">
                 <BiSearchAlt />
